@@ -32,13 +32,14 @@ Markdown Spec](https://github.github.com/gfm/).
 
 ### Fixed
 - `setup_index` command now reports Solr errors more effectively
+- Install Python dependencies from `requirements.lock` for reproducible builds
 
 ### Added
- - Enabled apache mod_ssl in web image build
- - Included codebase as part of Dockerfile build
+- Enabled apache mod_ssl in web image build
+- Included codebase as part of Dockerfile build
 
 ### Changed
- - Moved Dockerfile-dev to Dockerfile to support automated builds
+- Moved Dockerfile-dev to Dockerfile to support automated builds
 
 ### Removed
 
@@ -47,9 +48,10 @@ Markdown Spec](https://github.github.com/gfm/).
 ### Deprecated
 
 ### Contributors
- - Jim Campbell (lauterman)
- - Andrew Gearhart (andrewgearhart)
- - Jeremy Echols (jechols)
+- Jim Campbell (lauterman)
+- Andrew Gearhart (andrewgearhart)
+- Jeremy Echols (jechols)
+- Greg Tunink (techgique)
 
 ## [v1.0.2] - Solrpy
 [v1.0.2]: https://github.com/open-oni/open-oni/compare/v1.0.1...v1.0.2
