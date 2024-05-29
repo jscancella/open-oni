@@ -39,6 +39,7 @@ Markdown Spec](https://github.github.com/gfm/).
     new virtual environments.
   - Updated Python dependencies, added `pkg-config` to Ubuntu package needed for
     building `mysqlclient` Python package.
+- Upgrade jQuery to 3.7.1
 - Updated README's Dependency Roadmap
 
 ### Contributors
