@@ -12,4 +12,5 @@ source ENV/bin/activate
 # --no-cache-dir no longer disables building wheels in local cache,
 # so install wheel package to prevent bdist_wheel errors
 pip install wheel
+pip install --upgrade setuptools
 pip install -r requirements.lock
