@@ -13,4 +13,5 @@ requests
 rfc3339
 setuptools
 simplejson
+tzdata
 worldcat
