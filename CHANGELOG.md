@@ -68,8 +68,13 @@ Markdown Spec](https://github.github.com/gfm/).
     new virtual environments.
   - Updated Python dependencies, added `pkg-config` to Ubuntu package needed for
     building `mysqlclient` Python package.
-- Upgrade jQuery to 3.7.1
+- Docker test compose now uses sqlite rather than MariaDB for quicker testing
 - Updated README's Dependency Roadmap
+  - Update Python (via Docker Ubuntu 22.04 LTS) 3.8 to 3.10
+  - Update Django 3.2 LTS to 4.2 LTS
+  - Update Solr 8.x to 9.x
+  - Update jQuery 3.6.0 to 3.7.1
+  - Update OpenSeadragon 2.4.2 to 4.1.1
 
 ### Fixed
 - Various UTF8 fixes have been applied to allow emoji into the database. These
@@ -120,6 +125,12 @@ Markdown Spec](https://github.github.com/gfm/).
   ```
 - Add `CONN_HEALTH_CHECKS = True` to `settings_local.py` below `CONN_MAX_AGE`
   to enable persistent database connection health checks
+- Review dependencies and any local customizations for breaking changes
+  - Solr 8.x to 9.x: https://solr.apache.org/guide/solr/latest/upgrade-notes/solr-upgrade-notes.html
+    - Note a full re-index is encouraged for making one major version upgrade,
+      and **required** if upgrading two or more major versions
+  - jQuery 3.6.0 to 3.7.1: https://blog.jquery.com/2023/05/11/jquery-3-7-0-released-staying-in-order/
+  - OpenSeadragon 2.4.2 to 4.1.1: https://github.com/openseadragon/openseadragon/releases
 
 ### Deprecated
 - See features deprecated in Django
