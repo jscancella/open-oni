@@ -30,7 +30,7 @@ Markdown Spec](https://github.github.com/gfm/).
 -->
 
 ## [v1.2.0]
-[v1.2.0]: https://github.com/open-oni/open-oni/compare/v1.1.1...v1.2.0
+[v1.2.0]: https://github.com/open-oni/open-oni/compare/v1.1.2...v1.2.0
 
 ### Changed
 
@@ -46,6 +46,10 @@ Markdown Spec](https://github.github.com/gfm/).
 
 - Various UTF8 fixes have been applied to allow emoji into the database. These
   are more and more common in born-digital publications
+
+### Added
+- Persistent database connection health checks to avoid errors
+  when the db closes connections or restarts with `CONN_HEALTH_CHECKS = True`
 
 ### Migration
 
@@ -68,6 +72,8 @@ Markdown Spec](https://github.github.com/gfm/).
     'charset': 'utf8mb4',
   },
   ```
+- Add `CONN_HEALTH_CHECKS = True` to `settings_local.py` below `CONN_MAX_AGE`
+  to enable persistent database connection health checks
 
 ### Contributors
 - Jeremy Echols (jechols)
