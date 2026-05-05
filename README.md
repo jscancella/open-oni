@@ -11,6 +11,7 @@ information about the project's origins and history.
 ## Open ONI-powered Sites
 Visit sites currently powered by Open ONI:
 
+- [Georgia Historic Newspapers](https://gahistoricnewspapers.galileo.usg.edu/)
 - [Historic Oregon Newspapers](https://oregonnews.uoregon.edu/)
 - [Nebraska Newspapers](https://nebnewspapers.unl.edu/)
 - [North Carolina Newspapers](https://www.digitalnc.org/collections/newspapers/)

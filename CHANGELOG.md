@@ -29,11 +29,40 @@ Markdown Spec](https://github.github.com/gfm/).
 ### Contributors
 -->
 
-## [v1.2.0]
+## [v1.2.0] Django 4.2 LTS and MariaDB utf8mb4 for Emoji
 [v1.2.0]: https://github.com/open-oni/open-oni/compare/v1.1.2...v1.2.0
 
-### Changed
+### Security
+- Updates Django to latest available 4.2.x.
+- Updates Python packages to the latest available versions.
 
+### Changed
+- Fixes for features removed in Django 4.0:
+    - Replaces a reference (and removes an unused reference) to
+      `django.utils.http.urlquote`, an alias that was removed in Django 4.
+      [See original deprecation notice here](
+          https://docs.djangoproject.com/en/3.0/releases/3.0/#id3
+        ).
+    - Replaces `{% ifequal %}` and `{% ifnotequal %}` tags with their
+      `{% if %}` equivalents.
+    - Changes the docker/django-admin script to call django-admin instead
+      of django-admin.py, which was removed in 4.0.
+- Changes settings to adopt the following Django 4.2 defaults:
+  - Removes `SECURE_BROWSER_XSS_FILTER` (
+       https://docs.djangoproject.com/en/4.0/releases/4.0/#securitymiddleware-no-longer-sets-the-x-xss-protection-header
+     )
+  - Removes now-redundant `USE_L10N = True` (
+        https://docs.djangoproject.com/en/4.0/releases/4.0/#use-l10n-deprecation
+      )
+  - "To allow serving a Django site on a subpath without changing the value of
+    STATIC_URL, the leading slash is removed from that setting (now 'static/')
+    in the default startproject template."
+    (https://docs.djangoproject.com/en/4.0/releases/4.0/#miscellaneous)
+  - The STATICFILES_STORAGE setting is deprecated in favor of
+    STORAGES["staticfiles"].
+    (https://docs.djangoproject.com/en/4.2/releases/4.2/#id1)
+- Replaces usages of the deprecated `Logger.warn()` with `Logger.warning()`
+  (A Python thing, not a Django 4 thing.)
 - Upgraded Docker image to Ubuntu 22.04 LTS Jammy Jellyfish with Python 3.10.
   - Added `python3 -m ensurepip` to pip install script so pip reliably works in
     new virtual environments.
@@ -43,7 +72,6 @@ Markdown Spec](https://github.github.com/gfm/).
 - Updated README's Dependency Roadmap
 
 ### Fixed
-
 - Various UTF8 fixes have been applied to allow emoji into the database. These
   are more and more common in born-digital publications
 
@@ -51,8 +79,26 @@ Markdown Spec](https://github.github.com/gfm/).
 - Persistent database connection health checks to avoid errors
   when the db closes connections or restarts with `CONN_HEALTH_CHECKS = True`
 
-### Migration
+### Removed
+- See all features removed in Django
+  [4.0](https://docs.djangoproject.com/en/4.2/releases/4.0/#features-removed-in-4-0),
+  [4.1](https://docs.djangoproject.com/en/4.2/releases/4.1/#features-removed-in-4-1).
+- Notable removals include:
+  - `{% ifequal %}` and `{% ifnotequal %}` template tags.
+  - Various django.utils helper functions and aliases. 
 
+### Migration
+- Check themes and plugins for code that is not compatible with Django 4.x:
+  - Look for usages of `{% ifequal %}` and `{% ifnotequal %}` in theme
+    and plugin templates and replace them with `{% if %}` tags
+    and the `==` or `!=` operators.
+  - Review Django 4.x release notes with special attention to
+    [features removed in 4.0](
+        https://docs.djangoproject.com/en/5.1/releases/4.0/#features-removed-in-4-0
+      ) and [features removed in 4.1](
+        https://docs.djangoproject.com/en/5.1/releases/4.1/#features-removed-in-4-1
+      ).
+- Merge changes from requirements.lock into any project-specific requirements.lock.
 - You'll have to run database migrations, and they may take a while depending
   on the size of your `core_languagetext` data.
   - On ~60 gigs, it took UO roughly 45 minutes running on our production server
@@ -75,8 +121,20 @@ Markdown Spec](https://github.github.com/gfm/).
 - Add `CONN_HEALTH_CHECKS = True` to `settings_local.py` below `CONN_MAX_AGE`
   to enable persistent database connection health checks
 
+### Deprecated
+- See features deprecated in Django
+  [4.0](https://docs.djangoproject.com/en/4.2/releases/4.0/#features-deprecated-in-4-0),
+  [4.1](https://docs.djangoproject.com/en/4.2/releases/4.1/#features-deprecated-in-4-1),
+  [4.2](https://docs.djangoproject.com/en/4.2/releases/4.2/#features-deprecated-in-4-2).
+- Notable deprecations include:
+  - Direct use of time zone APIs from `pytz`
+    (https://docs.djangoproject.com/en/4.2/releases/4.0/#zoneinfo-default-timezone-implementation).
+  - `STATICFILES_STORAGE` and `DEFAULT_FILE_STORAGE` settings.
+    (Not to be confused with `STATIC_ROOT`.)
+
 ### Contributors
 - Jeremy Echols (jechols)
+- Joshua Wier (walkerwier)
 - Greg Tunink (techgique)
 
 ## [v1.1.2] Hotfix for docker developers
