@@ -73,6 +73,15 @@ Markdown Spec](https://github.github.com/gfm/).
 - Jeremy Echols (jechols)
 - Greg Tunink (techgique)
 
+## [v1.1.2] Hotfix for docker developers
+[v1.1.2]: https://github.com/open-oni/open-oni/compare/v1.1.1...v1.1.2
+
+### Changed
+- Update setuptools to latest on container startup
+
+### Contributors
+- Joshua Wier (walkerwier)
+
 ## [v1.1.1]
 [v1.1.1]: https://github.com/open-oni/open-oni/compare/v1.1.0...v1.1.1
 
