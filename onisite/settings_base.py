@@ -85,7 +85,7 @@ ESSAY_TEMPLATES = 'essays'
 #LOG_LOCATION = os.path.join(BASE_DIR, 'log', '')
 LOG_LOCATION = BASE_DIR / 'log'
 
-MARC_RETRIEVAL_URLFORMAT = 'https://chroniclingamerica.loc.gov/lccn/%s/marc.xml'
+MARC_RETRIEVAL_URLFORMAT = 'https://chroniclingamerica.loc.gov/data/bib-derivatives/%s.xml'
 
 # Display newspaper titles with medium ("volume", "microform") when available
 TITLE_DISPLAY_MEDIUM = False
