@@ -1,5 +1,5 @@
 coverage
-Django>=3.2,<3.3
+Django>=4.2,<4.3
 feedparser
 lxml
 mysqlclient
@@ -13,4 +13,5 @@ requests
 rfc3339
 setuptools
 simplejson
+tzdata
 worldcat
