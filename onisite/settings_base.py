@@ -5,16 +5,14 @@ from .django_defaults import *
 ################################################################
 # DJANGO CUSTOMIZATIONS
 ################################################################
-# https://docs.djangoproject.com/en/3.2/releases/3.2/#customizing-type-of-auto-created-primary-keys
+# https://docs.djangoproject.com/en/4.2/releases/3.2/#customizing-type-of-auto-created-primary-keys
 # Maintain past default setting to avoid extra migrations
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 # Our URLs are within the onisite app
 ROOT_URLCONF = 'onisite.urls'
 
-# Enable browser XSS protection, MIME-type sniff prevention headers,
-# and disable framing / embedding
-SECURE_BROWSER_XSS_FILTER = True
+# Enable MIME-type sniff prevention headers and disable framing / embedding
 SECURE_CONTENT_TYPE_NOSNIFF = True
 X_FRAME_OPTIONS = 'DENY'
 
@@ -87,7 +85,7 @@ ESSAY_TEMPLATES = 'essays'
 #LOG_LOCATION = os.path.join(BASE_DIR, 'log', '')
 LOG_LOCATION = BASE_DIR / 'log'
 
-MARC_RETRIEVAL_URLFORMAT = 'https://chroniclingamerica.loc.gov/lccn/%s/marc.xml'
+MARC_RETRIEVAL_URLFORMAT = 'https://chroniclingamerica.loc.gov/data/bib-derivatives/%s.xml'
 
 # Display newspaper titles with medium ("volume", "microform") when available
 TITLE_DISPLAY_MEDIUM = False
@@ -150,7 +148,10 @@ DATABASES = {
         'NAME':     os.getenv('ONI_DB_NAME', 'openoni'),
         'USER':     os.getenv('ONI_DB_USER', 'openoni'),
         'PASSWORD': os.getenv('ONI_DB_PASSWORD', 'openoni'),
-        'OPTIONS': { 'init_command': "SET sql_mode='STRICT_TRANS_TABLES'" },
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'; SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci;",
+            'charset': 'utf8mb4',
+        },
     }
 }
 
@@ -243,7 +244,7 @@ if DEBUG:
     # Output emails to console
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-    # Suggested order: https://docs.djangoproject.com/en/3.2/ref/middleware/#middleware-ordering
+    # Suggested order: https://docs.djangoproject.com/en/4.2/ref/middleware/#middleware-ordering
     MIDDLEWARE = (
         'django.middleware.security.SecurityMiddleware',
         'core.middleware.DisableClientSideCachingMiddleware',         # Open ONI
@@ -269,7 +270,7 @@ else:
         }
     }
 
-    # Suggested order: https://docs.djangoproject.com/en/3.2/ref/middleware/#middleware-ordering
+    # Suggested order: https://docs.djangoproject.com/en/4.2/ref/middleware/#middleware-ordering
     MIDDLEWARE = (
         'django.middleware.security.SecurityMiddleware',
         'core.middleware.TooBusyMiddleware',                          # Open ONI
@@ -283,4 +284,8 @@ else:
 
     # Fingerprint compiled static files with MD5 hash of contents
     # Store hashes in STATIC_ROOT directory as staticfiles.json
-    STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
+    STORAGES = {
+        'staticfiles': {
+            'BACKEND': 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage',
+        },
+    }

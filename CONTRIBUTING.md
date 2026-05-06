@@ -85,7 +85,7 @@ Language Notes:
 1. In existing files, prefer to stay consistent with code style used by the
    older code
 1. In new code, use [Django coding
-   standards](https://docs.djangoproject.com/en/3.2/internals/contributing/writing-code/coding-style/)
+   standards](https://docs.djangoproject.com/en/4.2/internals/contributing/writing-code/coding-style/)
 1. Don't mix style fixes with other changes
 1. Don't rewrite entire files to fix style without communicating to the team
    (this can result in VERY painful merging)
@@ -141,14 +141,11 @@ Language Notes:
 
 Follow these steps for each Open ONI release:
 
-- Ensure `core/version.py` is set to the new version on the release PR
 - Review and merge the release PR into `main`
 - [Create a GitHub release](https://github.com/open-oni/open-oni/releases/new)
 - Update [open-oni.github.io
   source](https://github.com/open-oni/open-oni.github.io) as necessary
 - Merge the `main` branch back into the `dev` branch
-- Copy the template for unreleased work in `CHANGELOG.md` and add a template
-  changelog entry file at `changelogs/YYYY-MM-DD-branch_name.md` on `dev`
 - Post an announcement to #general channel on Slack and the [Chronam Users
   mailing list](https://listserv.loc.gov/cgi-bin/wa?A0=CHRONAM-USERS)
 
