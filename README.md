@@ -58,9 +58,9 @@ wiki, which may further inform your resource allocation.
 
 Component | Version | Supported Until | Next Target Release | Documentation
 ----------|---------|-----------------|---------------------|--------------
-Python | 3.10 | 2026-10 | 3.12 | https://www.python.org/downloads/
-Django | 4.2 LTS | 2026-04 | 5.2 LTS, 2025-04 | https://www.djangoproject.com/download/#supported-versions
-MariaDB | 10.6 | 2026-07-06 | Next LTS in ~2 years | https://mariadb.org/about/#maintenance-policy
+Python | 3.12 | 2028-10 | 3.14 | https://www.python.org/downloads/
+Django | 5.2 LTS | 2028-04 | 6.2 LTS, 2027-04 | https://www.djangoproject.com/download/#supported-versions
+MariaDB | 11.4 | 2029-05-29 | Next LTS in ~2 years | https://mariadb.org/about/#maintenance-policy
 Solr | 9.x | Approx 2027, based on past major release dates | TBD | https://lucene.apache.org/solr/downloads.html#about-versions-and-support
 RAIS | 4.x | Unknown | TBD | https://github.com/uoregon-libraries/rais-image-server
 jQuery | 3.7.1 | Unknown | TBD | https://github.com/jquery/jquery/wiki/Roadmap
