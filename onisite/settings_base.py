@@ -9,6 +9,9 @@ from .django_defaults import *
 # Maintain past default setting to avoid extra migrations
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
+# forms.URLField default scheme goes to "https" for Django 6.0. Transition now
+FORMS_URLFIELD_ASSUME_HTTPS = True
+
 # Our URLs are within the onisite app
 ROOT_URLCONF = 'onisite.urls'
 

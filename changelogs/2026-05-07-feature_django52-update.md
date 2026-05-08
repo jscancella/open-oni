@@ -9,6 +9,11 @@ Markdown Spec](https://github.github.com/gfm/).
 ### Fixed
 
 ### Added
+- Notable new features in Django 5.2 LTS
+  - `{% querystring %}` template tags:
+    https://docs.djangoproject.com/en/5.2/releases/5.1/#querystring-template-tag
+  - `query` and `fragment` arguments to `reverse()` and `reverse_lazy()`
+    https://docs.djangoproject.com/en/5.2/releases/5.2/#urls
 
 ### Changed
 - Update Dependency Roadmap
@@ -22,6 +27,19 @@ Markdown Spec](https://github.github.com/gfm/).
 ### Removed
 
 ### Migration
+Review Django 5.0, 5.1, and 5.2 release notes:
+
+- https://docs.djangoproject.com/en/5.2/releases/5.0/
+  - Add setting `FORMS_URLFIELD_ASSUME_HTTPS = True` to transition to
+    `forms.URLField` default scheme changing to `https` coming in Django 6.0
+- https://docs.djangoproject.com/en/5.2/releases/5.1/
+- https://docs.djangoproject.com/en/5.2/releases/5.2/
+  - `django.template.context_processors.debug` no longer included in
+    `django_defaults.py` settings file inside
+    `TEMPLATES = [{..., 'OPTIONS': {'context_processors': [ HERE ,...]}]`
+    - https://docs.djangoproject.com/en/5.2/ref/templates/api/#django.template.context_processors.debug
+    - Removes the ability to check if app in `DEBUG` mode and `sql_queries`
+      timing in templates
 
 ### Deprecated
 
