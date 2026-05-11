@@ -68,6 +68,11 @@ Bootstrap | 3.4.1 | 2019-07-24 | Upgrade as part of NEH grant | https://github.c
 OpenSeadragon | 4.1.1 | Unknown | 5.x | https://github.com/openseadragon/openseadragon
 tablesorter | 2.31.3 | Unknown | TBD | https://github.com/Mottie/tablesorter/wiki/Changes
 
+Note: [jQuery cannot be updated to 4.x until Bootstrap is updated to 5.x, where
+it is optional](https://getbootstrap.com/docs/5.3/getting-started/javascript/#optionally-using-jquery).
+Migration to Bootstrap 5.x has been done on the [`dev-2.0`
+branch.](https://github.com/open-oni/open-oni/tree/dev-2.0)
+
 Also see our [Python package
 dependencies](https://github.com/open-oni/open-oni/blob/dev/requirements.txt).
 We've only added constraints where we are confident they are necessary to avoid
