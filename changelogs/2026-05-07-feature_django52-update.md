@@ -24,6 +24,7 @@ Markdown Spec](https://github.github.com/gfm/).
   - MariaDB 10.6 to 11.4
   - Solr 9.x to 10.x
   - Django 4.2.x to 5.2.x
+  - OpenSeadragon 4.1.1 to 6.0.2
 
 ### Removed
 
@@ -46,6 +47,7 @@ Review dependencies and any local customizations for breaking changes:
 - Solr 9.x to 10.x: https://solr.apache.org/guide/solr/latest/upgrade-notes/major-changes-in-solr-10.html
   - Note a full re-index is encouraged for making one major version upgrade,
     and **required** if upgrading two or more major versions
+- OpenSeadragon 4.1.1 to 6.0.2: https://github.com/openseadragon/openseadragon/releases
 
 ### Deprecated
 
