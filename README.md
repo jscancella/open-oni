@@ -66,7 +66,7 @@ RAIS | 4.x | Unknown | TBD | https://github.com/uoregon-libraries/rais-image-ser
 jQuery | 3.7.1 | Unknown | TBD | https://github.com/jquery/jquery/wiki/Roadmap
 Bootstrap | 3.4.1 | 2019-07-24 | Upgrade as part of NEH grant | https://github.com/twbs/release
 OpenSeadragon | 6.0.2 | Unknown | 7.x | https://github.com/openseadragon/openseadragon
-tablesorter | 2.31.3 | Unknown | TBD | https://github.com/Mottie/tablesorter/wiki/Changes
+tablesorter | 2.32.0 | Unknown | TBD | https://github.com/Mottie/tablesorter#recent-changes
 
 Note: [jQuery cannot be updated to 4.x until Bootstrap is updated to 5.x, where
 it is optional](https://getbootstrap.com/docs/5.3/getting-started/javascript/#optionally-using-jquery).
