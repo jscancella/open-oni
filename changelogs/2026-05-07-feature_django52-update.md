@@ -22,6 +22,7 @@ Markdown Spec](https://github.github.com/gfm/).
     - Remove deprecated `version` key at root of Docker compose file
     - Update `requirements.lock` for Python 3.12, adds `setuptools` and `wheel`
   - MariaDB 10.6 to 11.4
+  - Solr 9.x to 10.x
   - Django 4.2.x to 5.2.x
 
 ### Removed
@@ -41,6 +42,12 @@ Review Django 5.0, 5.1, and 5.2 release notes:
     - Removes the ability to check if app in `DEBUG` mode and `sql_queries`
       timing in templates
 
+Review dependencies and any local customizations for breaking changes:
+- Solr 9.x to 10.x: https://solr.apache.org/guide/solr/latest/upgrade-notes/major-changes-in-solr-10.html
+  - Note a full re-index is encouraged for making one major version upgrade,
+    and **required** if upgrading two or more major versions
+
 ### Deprecated
 
 ### Contributors
+- Greg Tunink (techgique)
