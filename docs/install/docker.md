@@ -1,13 +1,5 @@
 # Docker Installation
 
-- [Note about Windows and Git configuration](#note-about-windows-and-git-configuration)
-- [First Time Installation](#first-time-installation)
-- [Logs](#logs)
-- [Development](#development)
-  - [Erase and Start Fresh](#erase-and-start-fresh)
-  - [Reviewing Code](#reviewing-code)
-
-
 If you are already set up with Docker, you may wish to refer to the
 [Docker Command Quick Reference](/docs/advanced/docker-reference.md) guide.
 

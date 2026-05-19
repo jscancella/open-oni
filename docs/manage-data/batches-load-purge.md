@@ -3,10 +3,6 @@
 The load and purge batch explanations are copied from the
 [admin commands](/docs/advanced/admin-commands.md) documentation.
 
-- [Load Batch](#load-batch)
-- [Purge Batch](#purge-batch)
-- [Obtain Batches](#obtain-batches)
-
 If you are using docker, batches should be stored in `data/batches`.
 
 ## Load Batch

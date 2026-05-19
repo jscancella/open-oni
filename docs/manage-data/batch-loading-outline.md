@@ -2,17 +2,6 @@
 
 This is an outline of the batch loading process to aid in future work on the code such as potential debugging and enhancement, and to help understand the process as following the code is a little maze-like bouncing between a handful of files.
 
-- [load_batch Management Command](#load_batch-management-command)
-- [BatchLoader.load_batch](#batchloaderload_batch)
-- [Process Batch XML](#process-batch-xml)
-  - [Create Title Records](#create-title-records)
-    - [Read MARC XML](#read-marc-xml)
-  - [Load Pages](#load-pages)
-    - [Process Page OCR](#process-page-ocr)
-    - [Index Page in Solr](#index-page-in-solr)
-- [Repeat and Complete](#repeat-and-complete)
-  - [Load Error](#load-error)
-
 ## load_batch Management Command
 
 The process begins with the `manage.py load_batch (batch_path)` management command. These management commands by default call the `handle` function within the corresponding file in `(app)/management/commands/` where `core` is the main app for the Open ONI Django project: https://github.com/open-oni/open-oni/blob/v1.0.6/core/management/commands/load_batch.py#L37

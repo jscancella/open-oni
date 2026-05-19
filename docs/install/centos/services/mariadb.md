@@ -1,10 +1,5 @@
 # MariaDB
 
-**Contents**
-
-- [Install](#install)
-- [Schema and Access Control](#schema-and-access-control)
-
 ## Install
 
 General installation and configuration is outside the scope of Open ONI

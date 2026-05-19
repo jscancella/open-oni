@@ -1,20 +1,5 @@
 # Open ONI Django App
 
-**Contents**
-
-- [Dependencies](#dependencies)
-- [Install](#install)
-    - [File-based Cache Directory](#file-based-cache-directory)
-    - [Python Dependencies](#python-dependencies)
-    - [Newspaper Data Symlink](#newspaper-data-symlink)
-- [Configure](#configure)
-    - [Local Settings](#local-settings)
-        - [Theme and Plugins](#theme-and-plugins)
-        - [Title and Project Name](#title-and-project-name)
-    - [Logging](#logging)
-    - [URLs](#urls)
-- [Migrate Database](#migrate-database)
-
 ## Dependencies
 - Download the [Open ONI files](/docs/install/centos/README.md#open-oni-files)
 - Prepare the [Python environment](/docs/install/centos/README.md#python-environment)

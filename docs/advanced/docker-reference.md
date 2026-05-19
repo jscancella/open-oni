@@ -3,12 +3,6 @@
 This list may not be comprehensive, but we hope it's a good start for those new
 to docker and Open ONI.
 
-- [Rebuild Dev Containers](#rebuild-dev-containers)
-- [Manage Data](#manage-data)
-- [Run Commands from Containers](#run-commands-from-containers)
-- [Django Reference](#django-reference)
-- [Manage Containers, Volumes, and Images](#manage-containers-volumes-and-images)
-
 ## Rebuild Dev Containers
 
 Builds or rebuilds the development setup.  Useful if you changed something
