@@ -166,7 +166,7 @@ to compile the files. Collected static files are stored in the
 If you are using Docker, you can use this command:
 
 ```
-docker-compose exec web manage collectstatic --noinput
+docker compose exec web manage collectstatic --noinput
 ```
 
 If you are not using Docker, follow these steps as a regular user (not root):

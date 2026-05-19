@@ -62,7 +62,7 @@ When you're ready, push up your code and
 ### Testing
 
 ```bash
-docker-compose -f test-compose.yml -p onitest up test
+docker compose -f test-compose.yml -p onitest up test
 ```
 
 This will produce a lot of output and you'll have to scroll back to get read

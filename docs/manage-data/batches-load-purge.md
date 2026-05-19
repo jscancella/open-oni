@@ -42,7 +42,7 @@ sudo chmod -R o+rX
 With docker, a path is not needed if your batch is in `data/batches`:
 
 ```bash
-docker-compose exec web /load_batch.sh batch_name
+docker compose exec web /load_batch.sh batch_name
 ```
 
 After ingesting a batch that replaces existing content it is recommended 
@@ -65,7 +65,7 @@ manage.py purge_batch batch_name
 With docker:
 
 ```bash
-docker-compose exec web manage purge_batch batch_name
+docker compose exec web manage purge_batch batch_name
 ```
 
 ## Obtain Batches

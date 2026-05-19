@@ -32,12 +32,12 @@ git checkout dev
 ```
 
 Next you may customize your application by changing the [configuration](/docs/customization/configuration.md#configuring-your-app).
-This is completely optional as by default the docker-compose version of Open ONI works without any changes.
+This is completely optional as by default the docker compose version of Open ONI works without any changes.
 
 Now, boot up the app. Initially, this may take quite some time, but if all goes well in the future it should be fairly rapid:
 
 ```bash
-docker-compose up
+docker compose up
 ```
 
 If you did not change the default application location, you should be able to see the app running at [localhost](http://localhost).
@@ -45,11 +45,11 @@ If you did not change the default application location, you should be able to se
 ## Logs
 
 If you only care about watching the web service's apache logs, this may be more
-useful: `docker-compose up web`.  And if you want the services to run in the
-background without following logs: `docker-compose up -d`.
+useful: `docker compose up web`.  And if you want the services to run in the
+background without following logs: `docker compose up -d`.
 
 When services are running in the background, logs are always available via
-`docker-compose logs` or `docker-compose logs [service name, such as "web"]`
+`docker compose logs` or `docker compose logs [service name, such as "web"]`
 
 ## Development
 This section contains information for those wishing to do development work on Open ONI. 
@@ -63,9 +63,9 @@ image configuration, switch out versions of Python libraries, etc.  For a fully
 fresh start, do this:
 
 ```bash
-docker-compose down -v --rmi local
+docker compose down -v --rmi local
 # If you want to truly start fresh, do this instead
-# docker-compose down -v --rmi all
+# docker compose down -v --rmi all
 
 # ENV is the Python virtual environment which persists until deleted or
 # manually reinstalled
@@ -73,14 +73,14 @@ sudo rm ENV/ -rf
 
 # Triple-check your overrides!
 vim docker-compose.override.yml
-docker-compose up -d
-docker-compose logs -f
+docker compose up -d
+docker compose logs -f
 ```
 
 ## Reviewing Code
 
-To test a pull request, you can often simply run `docker-compose down` followed
-by `docker-compose up`.  However, this *may not do what you want*.  In many
+To test a pull request, you can often simply run `docker compose down` followed
+by `docker compose up`.  However, this *may not do what you want*.  In many
 cases the code changes are significant enough that you really need to run ONI
 "from scratch".  You can do this by destroying all your volumes, your `ENV`
 directory, and rebuilding the docker image.
@@ -92,8 +92,8 @@ This can be painful to do regularly.  As such, you should consider having a
 git clone https://github.com/open-oni/open-oni.git cleanoni
 cd cleanoni
 git checkout <branch>
-docker-compose build
-docker-compose up
+docker compose build
+docker compose up
 ```
 
 The `build` step may not seem necessary if you've built the ONI image recently,
