@@ -63,6 +63,14 @@
   <h2>{{ page_head_heading }}</h2>
 
   {% block page_top_material %}
+    {% block page_top_permalink %}
+      <span class="control pull-right">
+        <span class="glyphicon glyphicon-share"
+        aria-hidden="true"></span>
+        <a href="{% url 'openoni_page' title.lccn issue.date_issued issue.edition page.sequence %}">Permalink</a>
+        <button id="copy-permalink" class="btn btn-default">Copy</button>
+      </span>
+    {% endblock page_top_permalink %}
     <p class="image_credit">Image provided by: {{image_credit}}</p>
     <p class="page_about">About <a href="{% url 'openoni_title' title.lccn %}">{{page_head_subheading}}</a> | <a href="../">View Entire Issue ({{page.issue.date_issued}})</a></p>
   {% endblock page_top_material %}
@@ -147,11 +155,6 @@
                 aria-hidden="true"></span>
               <a id="clip" href="#" target="print">Clip/Print Image</a>
             </span>
-          <span class="control">
-            <span class="glyphicon glyphicon-share"
-                  aria-hidden="true"></span>
-            <a id="share" href="{% url 'openoni_page' title.lccn issue.date_issued issue.edition page.sequence %}">Share</a>
-          </span>
           {% endif %}
         </span>{# /other_controls #}
       </div>{# /imageViewer_nav #}
