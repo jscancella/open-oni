@@ -13,8 +13,8 @@ configure_logging('setup_index_logging.config', 'setup_index.log')
 
 _logger = logging.getLogger(__name__)
 fixture_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../fixtures'))
-core_url = settings.SOLR_BASE_URL + '/api/cores/openoni?action=STATUS&indexInfo=false'
-schema_url = settings.SOLR_BASE_URL + '/api/cores/openoni/schema'
+core_url = settings.SOLR_BASE_URL + '/api/cores/openoni?indexInfo=false'
+schema_url = settings.SOLR_BASE_URL + '/solr/openoni/schema'
 
 # Copy fields are defined here because we have to manually check for dupes; for
 # some reason Solr doesn't do this for us, and will in fact allow dozens of the

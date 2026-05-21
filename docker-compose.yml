@@ -1,8 +1,6 @@
-version: '2.1'
-
 services:
   rdbms:
-    image: mariadb:10.6
+    image: mariadb:11.4
     environment:
       - MYSQL_ROOT_PASSWORD=123456
       - MYSQL_DATABASE=openoni
@@ -13,7 +11,7 @@ services:
       - data-mariadb:/var/lib/mysql
     command: ['--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci']
   solr:
-    image: solr:9-slim
+    image: solr:10-slim
     volumes:
       - data-solr:/var/solr
     command:
