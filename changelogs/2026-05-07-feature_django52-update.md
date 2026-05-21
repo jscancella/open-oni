@@ -25,7 +25,6 @@ Markdown Spec](https://github.github.com/gfm/).
   - Solr 9.x to 10.x
   - Django 4.2.x to 5.2.x
   - OpenSeadragon 4.1.1 to 6.0.2
-  - tablesorter 2.31.3 to 2.32.0
 
 ### Removed
 
@@ -49,7 +48,6 @@ Review dependencies and any local customizations for breaking changes:
   - Note a full re-index is encouraged for making one major version upgrade,
     and **required** if upgrading two or more major versions
 - OpenSeadragon 4.1.1 to 6.0.2: https://github.com/openseadragon/openseadragon/releases
-- tablesorter 2.31.3 to 2.32.0: https://github.com/Mottie/tablesorter#recent-changes
 
 ### Deprecated
 
