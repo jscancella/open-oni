@@ -65,8 +65,13 @@ Solr | 10.x | Approx 2029, based on past major release dates | TBD | https://luc
 RAIS | 4.x | Unknown | TBD | https://github.com/uoregon-libraries/rais-image-server
 jQuery | 3.7.1 | Unknown | TBD | https://github.com/jquery/jquery/wiki/Roadmap
 Bootstrap | 3.4.1 | 2019-07-24 | Upgrade as part of NEH grant | https://github.com/twbs/release
-OpenSeadragon | 4.1.1 | Unknown | 5.x | https://github.com/openseadragon/openseadragon
+OpenSeadragon | 6.0.2 | Unknown | 7.x | https://github.com/openseadragon/openseadragon
 tablesorter | 2.31.3 | Unknown | TBD | https://github.com/Mottie/tablesorter/wiki/Changes
+
+Note: [jQuery cannot be updated to 4.x until Bootstrap is updated to 5.x, where
+it is optional](https://getbootstrap.com/docs/5.3/getting-started/javascript/#optionally-using-jquery).
+Migration to Bootstrap 5.x has been done on the [`dev-2.0`
+branch.](https://github.com/open-oni/open-oni/tree/dev-2.0)
 
 Also see our [Python package
 dependencies](https://github.com/open-oni/open-oni/blob/dev/requirements.txt).
