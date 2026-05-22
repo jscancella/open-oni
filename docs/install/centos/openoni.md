@@ -32,7 +32,7 @@ maintainers, but it is likely that dependencies such as Django have released
 newer versions. We do not plan to make Open ONI releases based on dependency
 releases outside of severe security vulnerabilities or breaking changes. We may
 mention dependency releases such as Django updates in the #general channel of
-our Slack workspace.
+our Discord workspace.
 
 We encourage you to review `requirements.txt` which [controls the versions pip
 may install](https://pip.pypa.io/en/stable/user_guide/#requirements-files) and

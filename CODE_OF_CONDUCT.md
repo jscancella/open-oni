@@ -32,7 +32,7 @@ us and the technical communities in which we participate.
 
 This code of conduct applies to all spaces managed by the Open ONI organization.
 This includes [Open ONI
-Slack](https://join.slack.com/t/open-oni/shared_invite/enQtMzg5MDg5NjU5MDU2LTA4MmViOTkxZDliZWZmM2FlMGU5ODZjNDU0OWQxYzIzMTY1YmFlMWEzZDFkNDNjZmYxYzUyMmMwZjlkMjU1MGE),
+Discord](https://discord.gg/4JbkHjp5a),
 [Open ONI GitHub](https://github.com/open-oni/), and any other forums created by
 the project team which the community uses for communication online or in person.
 In addition, violations of this code outside these spaces may affect a person's
@@ -46,10 +46,10 @@ This is the team of individuals who have volunteered to respond to violation
 reports and enforce this code of conduct. Please contact any and all members
 with code of conduct inquiries and violation reports.
 
-Member Name | Slack Handle | Email Address
+Member Name | Discord Handle | Email Address
 ------------|--------------|--------------
-Karin Dalziel | karin | kdalziel2 [at] unl.edu
-Andrew Gearhart | andrewgearhart | amg32 [at] psu.edu
+Karin Dalziel | - | kdalziel2 [at] unl.edu
+Andrew Gearhart | - | amg32 [at] psu.edu
 Greg Tunink | techgique | techgique [at] unl.edu
 
 ## Expected Behavior
@@ -103,7 +103,7 @@ project](http://web.archive.org/web/20141109123859/http://speakup.io/coc.html).
 If you believe someone is violating the code of conduct we ask that you report
 it to one or more members of the Open ONI Community Health Team either via email
 or [Open ONI
-Slack](https://join.slack.com/t/open-oni/shared_invite/enQtMzg5MDg5NjU5MDU2LTA4MmViOTkxZDliZWZmM2FlMGU5ODZjNDU0OWQxYzIzMTY1YmFlMWEzZDFkNDNjZmYxYzUyMmMwZjlkMjU1MGE).
+Discord](https://discord.gg/4JbkHjp5a).
 If you are reporting a violation by one or more of the team members, only the
 other team members will be informed to review and respond to the report. In the
 event of any conflict of interest a team member must immediately notify the
@@ -147,7 +147,7 @@ response will include an estimated time for full response based on team
 availability (illness, vacation, conferences, etc) and complexity of the report
 (number of individuals, time span, availability of public evidence, etc). Team
 members will aim to communicate availability through email auto-replies and
-Slack status messages.
+Discord status messages.
 
 The team will meet to review the incident and determine:
 - What happened.
@@ -165,10 +165,10 @@ If a report doesn't contain enough information, the team will obtain all
 relevant data before acting by contacting any individuals involved to get a more
 complete account of events. This information will be collected in writing, and
 whenever possible the committee's deliberations will be recorded and retained
-(i.e. Slack transcripts, email discussions, recorded voice conversations, etc).
+(i.e. Discord transcripts, email discussions, recorded voice conversations, etc).
 
 ### Acting Unilaterally
-If the act is ongoing (such as someone engaging in harassment in Slack), or
+If the act is ongoing (such as someone engaging in harassment in Discord), or
 involves a threat to anyone's safety (e.g. threats of violence), any team member
 may act immediately (before consulting other members) to end the situation. In
 ongoing situations, any team member may at their discretion employ any of the
@@ -188,7 +188,7 @@ to how to respond. Responses may include:
 - Nothing (if we determine no violation occurred).
 - A private reprimand from the team to the individual(s) involved.
 - A public reprimand in the space the violation occurred.
-- An imposed vacation (i.e. asking someone to "take a week off" from Slack or
+- An imposed vacation (i.e. asking someone to "take a week off" from Discord or
   GitHub). They'll be asked to take this vacation voluntarily, but if they don't
   agree then a temporary ban may be imposed to enforce this vacation.
 - A permanent or temporary ban from some or all Open ONI spaces. The team will
@@ -196,7 +196,7 @@ to how to respond. Responses may include:
   extended to new Open ONI fora, or otherwise maintained.
 - A request for a public or private apology. The team may, if it chooses, attach
   "strings". For example, the team may ask a violator to apologize in order to
-  retain their membership on a Slack channel.
+  retain their membership on a Discord channel.
 
 Once we've determined our final action, we'll contact the original reporter to
 let them know what action (if any) we'll be taking. We'll take into account

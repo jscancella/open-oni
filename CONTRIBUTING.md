@@ -10,7 +10,7 @@ Conduct](https://github.com/open-oni/open-oni/tree/dev/CODE_OF_CONDUCT.md)
 ## Develop With Us
 
 There is a lot of work to be done on Open ONI. [Joining us on
-Slack](https://join.slack.com/t/open-oni/shared_invite/enQtMzg5MDg5NjU5MDU2LTA4MmViOTkxZDliZWZmM2FlMGU5ODZjNDU0OWQxYzIzMTY1YmFlMWEzZDFkNDNjZmYxYzUyMmMwZjlkMjU1MGE)
+Discord](https://discord.gg/4JbkHjp5a)
 and [submitting issues](https://github.com/open-oni/open-oni/issues) are both
 great ways to get involved without diving into the code.
 
@@ -132,6 +132,6 @@ Follow these steps for each Open ONI release:
 - Update [open-oni.github.io
   source](https://github.com/open-oni/open-oni.github.io) as necessary
 - Merge the `main` branch back into the `dev` branch
-- Post an announcement to #general channel on Slack and the [Chronam Users
+- Post an announcement to #general channel on Discord and the [Chronam Users
   mailing list](https://listserv.loc.gov/cgi-bin/wa?A0=CHRONAM-USERS)
 
