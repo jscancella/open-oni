@@ -4,7 +4,11 @@
 ## Submitter Checklist
 
 - [ ] Verify all tests pass
-  - Run tests with `docker-compose -f test-compose.yml -p onitest up test`
+  - Run tests with `docker compose -f test-compose.yml -p onitest up test`
+    - If modifying containerization (e.g. `docker-compose.yml`,
+      `test-compose.yml`, or `docker/Dockerfile`) remove test volumes and local
+      image builds before next run of tests with
+      `docker compose -f test-compose.yml -p onitest down -v --rmi local`
 - [ ] Update `README.md` and `docs/` as necessary
   - [ ] If a `manage.py` command is added, deleted, or modified its help text must
     be valid and it should be documented in detail in

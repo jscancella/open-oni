@@ -3,10 +3,6 @@
 The load and purge batch explanations are copied from the
 [admin commands](/docs/advanced/admin-commands.md) documentation.
 
-- [Load Batch](#load-batch)
-- [Purge Batch](#purge-batch)
-- [Obtain Batches](#obtain-batches)
-
 If you are using docker, batches should be stored in `data/batches`.
 
 ## Load Batch
@@ -42,7 +38,7 @@ sudo chmod -R o+rX
 With docker, a path is not needed if your batch is in `data/batches`:
 
 ```bash
-docker-compose exec web /load_batch.sh batch_name
+docker compose exec web /load_batch.sh batch_name
 ```
 
 After ingesting a batch that replaces existing content it is recommended 
@@ -65,7 +61,7 @@ manage.py purge_batch batch_name
 With docker:
 
 ```bash
-docker-compose exec web manage purge_batch batch_name
+docker compose exec web manage purge_batch batch_name
 ```
 
 ## Obtain Batches

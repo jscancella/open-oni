@@ -6,12 +6,6 @@ that you may want to refer to while you work on your own. If you have made
 changes to CSS, JS, or images, you will need to
 [compile static files](#compile-static-files).
 
-- [Create a New Theme](#create-a-new-theme)
-- [Customize Your Theme](#customize-your-theme)
-- [Common Overrides](#common-overrides)
-- [CSS Customization](#css-customization)
-- [Compile Static Files](#compile-static-files)
-
 View the [plugin documentation](/docs/customization/plugins.md) for more
 information about available plugins and information about how to include them
 in your application.
@@ -166,7 +160,7 @@ to compile the files. Collected static files are stored in the
 If you are using Docker, you can use this command:
 
 ```
-docker-compose exec web manage collectstatic --noinput
+docker compose exec web manage collectstatic --noinput
 ```
 
 If you are not using Docker, follow these steps as a regular user (not root):

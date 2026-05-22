@@ -29,7 +29,7 @@ def page_count():
     return conn().search(q='type:page', rows=0).hits
 
 def _solr_escape(value):
-    """
+    r"""
     Escape un-escaped special characters and return escaped value.
     >>> _solr_escape(r'foo+') == r'foo\+'
     True

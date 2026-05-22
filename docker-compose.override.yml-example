@@ -3,7 +3,7 @@
 # environment.
 #
 # Please don't just copy this and use all these values as-is.  They're truly
-# meant strictly to illustrate what you can do with docker-compose!
+# meant strictly to illustrate what you can do with docker compose!
 version: '2.1'
 services:
   # In this example, we are overriding the docker mysql config to use the more

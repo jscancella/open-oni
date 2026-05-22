@@ -7,12 +7,6 @@ set up the Python environment. Then configure the services Apache, MariaDB,
 RAIS, and Solr which Open ONI relies upon. Finally configure the Open ONI Django
 app itself.
 
-**Contents**
-
-- [Open ONI Files](#open-oni-files)
-- [Python Environment](#python-environment)
-- [Other Documents](#other-documents)
-
 ## Open ONI Files
 Here is an outline of important default file locations for Open ONI:
 

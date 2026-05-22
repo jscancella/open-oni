@@ -177,6 +177,6 @@ class SolrIndexTests(TestCase):
     # _solr_escape (page)
     
     def test_solr_escape(self):
-        self.assertEqual(si._solr_escape('New+York'), 'New\+York')
-        self.assertEqual(si._solr_escape('New\York'), 'New\\York')
+        self.assertEqual(si._solr_escape('New+York'), r'New\+York')
+        self.assertEqual(si._solr_escape(r'New\York'), r'New\York')
         # TODO add more tests for escaping

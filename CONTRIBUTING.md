@@ -7,20 +7,6 @@ Everyone interacting within the Open ONI community is expected to follow the
 [Open ONI Community Code of
 Conduct](https://github.com/open-oni/open-oni/tree/dev/CODE_OF_CONDUCT.md)
 
-**Contents**
-
-- [Develop With Us](#develop-with-us)
-  - [Workflow](#workflow)
-  - [Testing](#testing)
-- [Development Standards](#development-standards)
-  - [Style Guidelines](#style-guidelines)
-    - [Documentation](#documentation)
-  - [Source Control](#source-control)
-    - [Feature Branches](#feature-branches)
-    - [Pull Requests and Merging](#pull-requests-and-merging)
-  - [Security](#security)
-  - [Release Checklist](#release-checklist)
-
 ## Develop With Us
 
 There is a lot of work to be done on Open ONI. [Joining us on
@@ -62,7 +48,7 @@ When you're ready, push up your code and
 ### Testing
 
 ```bash
-docker-compose -f test-compose.yml -p onitest up test
+docker compose -f test-compose.yml -p onitest up test
 ```
 
 This will produce a lot of output and you'll have to scroll back to get read

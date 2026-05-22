@@ -5,13 +5,6 @@ By default the docker compose version of Open ONI works without any needed overr
 You should read it carefully and fully understand what and why you are making the changes.
 Failure to do so will cause problems. 
 
-- [settings_local.py](#onisitesettings_localpy)
-- [Environment Variables](#environment-variables)
-- [docker-compose.yml](#docker-composeyml)
-- [onisite/settings_base.py](#onisitesettings_basepy)
-- [onisite/settings_local.py](#onisitesettings_localpy-1)
-- [onisite/urls.py](#onisiteurlspy)
-
 ## `onisite/settings_local.py`
 
 Unlike a vanilla Django installation, our `onisite/settings.py` is not where
@@ -42,9 +35,9 @@ to customize settings files directly.
 
 ### `docker-compose.yml`
 Note many settings such as database credentials and URLs shouldn't be changed
-for the default docker-compose setup.
+for the default `docker compose` setup.
 
-If you're using docker-compose, you can also opt to configure these
+If you're using `docker compose`, you can also opt to configure these
 values via a `docker-compose.override.yml` or `.env` file. You can copy
 `.env.example` to `.env` and alter `.env` as necessary.
 
@@ -55,7 +48,7 @@ values via a `docker-compose.override.yml` or `.env` file. You can copy
 
 ### `onisite/settings_base.py`
 - `ONI_DB_HOST` (default = `rdbms`): Hostname for the MariaDB server. If using
- docker-compose, this *and all other database settings* should remain
+ docker compose, this *and all other database settings* should remain
  unchanged unless you know what you're doing!
 - `ONI_DB_PORT` (default = `3306`): Database port, almost always 3306.
 - `ONI_DB_NAME` (default = `openoni`): Database name.

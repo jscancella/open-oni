@@ -139,6 +139,27 @@
         viewer.addHandler("animation-finish", resizePrint);
         viewer.addHandler("animation-start", disablePrint);
 
+        $("#copy-permalink").click(function (event) {
+            $(this).data.originalText = "Copy";
+
+            navigator.clipboard.writeText(page_url).then(
+                // Success
+                () => {
+                    $("#copy-permalink").html("Copied!");
+                    setTimeout(() => $("#copy-permalink")
+                      .html($("#copy-permalink").data.originalText),
+                      2000);
+                },
+                // Fail
+                () => {
+                    $("#copy-permalink").html("Unable to copy!");
+                    setTimeout(() => $("#copy-permalink")
+                      .html($("#copy-permalink").data.originalText),
+                      2000);
+                },
+            );
+        });
+
         $("#pageNum").change(function() {
             page_url = $("#pageNum").val();
             window.location = page_url;

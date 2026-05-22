@@ -3,12 +3,6 @@
 This list may not be comprehensive, but we hope it's a good start for those new
 to docker and Open ONI.
 
-- [Rebuild Dev Containers](#rebuild-dev-containers)
-- [Manage Data](#manage-data)
-- [Run Commands from Containers](#run-commands-from-containers)
-- [Django Reference](#django-reference)
-- [Manage Containers, Volumes, and Images](#manage-containers-volumes-and-images)
-
 ## Rebuild Dev Containers
 
 Builds or rebuilds the development setup.  Useful if you changed something
@@ -16,14 +10,14 @@ copied into the container, such as the various helper scripts in the `docker`
 directory:
 
 ```bash
-docker-compose down
-docker-compose up
+docker compose down
+docker compose up
 ```
 
-Or if you don't want to be "trapped" in the log output: `docker-compose up -d`
+Or if you don't want to be "trapped" in the log output: `docker compose up -d`
 
-Remember, you can always get at logs via `docker-compose logs`, and drill down
-just to the logs you want, which is usually the web service: `docker-compose logs web`.
+Remember, you can always get at logs via `docker compose logs`, and drill down
+just to the logs you want, which is usually the web service: `docker compose logs web`.
 
 ## Manage Data
 
@@ -36,9 +30,9 @@ Then run our custom batch-loader wrapper:
 
 ```bash
 # You have to have the services running in order to ingest
-docker-compose up -d
+docker compose up -d
 
-docker-compose exec web /load_batch.sh <batch_name>
+docker compose exec web /load_batch.sh <batch_name>
 ```
 
 `/load_batch.sh <batch_name>` is a shortcut for:
@@ -54,7 +48,7 @@ still be readable when the Apache user tries to read them.
 ### Purge a Batch
 
 ```bash
-docker-compose exec web manage purge_batch batch_uuml_thys_ver01
+docker compose exec web manage purge_batch batch_uuml_thys_ver01
 ```
 
 ## Run Commands from Containers
@@ -62,19 +56,19 @@ docker-compose exec web manage purge_batch batch_uuml_thys_ver01
 Open ONI app shell:
 
 ```bash
-docker-compose exec web bash
+docker compose exec web bash
 ```
 
 Database shell:
 
 ```bash
-docker-compose exec rdbms mysql -uroot -p123456 -Dopenoni
+docker compose exec rdbms mysql -uroot -p123456 -Dopenoni
 ```
 
 Django shell:
 
 ```bash
-docker-compose exec web manage shell
+docker compose exec web manage shell
 ```
 
 Then work with the Django ORM like this:
@@ -89,7 +83,7 @@ models.Titles.objects.all()
 ### Run tests
 
 ```bash
-docker-compose -f test-compose.yml -p onitest up test
+docker compose -f test-compose.yml -p onitest up test
 ```
 
 The test container definition runs a shortcut for unit tests with a special
@@ -99,7 +93,7 @@ consistent environment.
 Remove all test containers, volumes, and images with the following command:
 
 ```bash
-docker-compose -f test-compose.yml -p onitest down -v --rmi local
+docker compose -f test-compose.yml -p onitest down -v --rmi local
 ```
 
 ### Rebuild static files
@@ -108,7 +102,7 @@ These include CSS, JS, and images. You will need to run this command when
 developing themes:
 
 ```bash
-docker-compose exec web manage collectstatic --noinput
+docker compose exec web manage collectstatic --noinput
 ```
 
 ### Run arbitrary admin commands
@@ -116,7 +110,7 @@ docker-compose exec web manage collectstatic --noinput
 `django-admin` is available within the container:
 
 ```bash
-docker-compose exec web django-admin help
+docker compose exec web django-admin help
 ```
 
 Note that django-admin doesn't know about specific projects without passing the
@@ -124,7 +118,7 @@ Note that django-admin doesn't know about specific projects without passing the
 script within the Open ONI project:
 
 ```bash
-docker-compose exec web manage help batches
+docker compose exec web manage help batches
 ```
 
 ### Change / update Python dependencies
@@ -134,7 +128,7 @@ If `requirements.txt` is changed or you want to update dependencies in
 and `pip-reinstall.sh` scripts install from `requirements.lock`.
 
 ```bash
-docker-compose exec web /pip-update.sh
+docker compose exec web /pip-update.sh
 ```
 
 ### Django Migrations in Docker
@@ -142,8 +136,8 @@ docker-compose exec web /pip-update.sh
 Roll back the database
 
 ```bash
-docker-compose exec web manage showmigrations
-docker-compose exec web manage migrate <app (core)> <migration name>
+docker compose exec web manage showmigrations
+docker compose exec web manage migrate <app (core)> <migration name>
 ```
 
 ## Manage Containers, Volumes, and Images
@@ -151,7 +145,7 @@ docker-compose exec web manage migrate <app (core)> <migration name>
 Remove the containers (persistent data remains)
 
 ```bash
-docker-compose down
+docker compose down
 ```
 
 Remove persistent data containers and data volumes
@@ -159,7 +153,7 @@ Remove persistent data containers and data volumes
 **NOTE**: Only do this if you want to restart with no data!
 
 ```bash
-docker-compose down
+docker compose down
 docker volume rm open-oni_data-mariadb
 docker volume rm open-oni_data-solr
 ```
@@ -191,5 +185,5 @@ docker rmi image_name      # delete an image (need to remove containers, first)
 ### Stop the Open ONI Stack
 
 ```bash
-docker-compose down
+docker compose down
 ```
